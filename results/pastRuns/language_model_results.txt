@@ -1,0 +1,253 @@
+First attempt:
+Learning rate = 0.005
+Batch size = 32
+Hidden_dim = 128
+
+Results:
+Epoch: 10/400............. Loss: 1.9146 Val Loss: 1.6329 Perplexity: 6.7844
+Epoch: 20/400............. Loss: 1.5328 Val Loss: 1.5157 Perplexity: 4.6313
+Epoch: 30/400............. Loss: 1.3530 Val Loss: 1.5241 Perplexity: 3.8689
+Epoch: 40/400............. Loss: 1.2687 Val Loss: 1.5794 Perplexity: 3.5563
+Epoch: 50/400............. Loss: 1.1544 Val Loss: 1.6127 Perplexity: 3.1720
+Epoch: 60/400............. Loss: 1.1341 Val Loss: 1.6647 Perplexity: 3.1084
+Epoch: 70/400............. Loss: 1.0634 Val Loss: 1.7144 Perplexity: 2.8963
+Epoch: 80/400............. Loss: 1.0061 Val Loss: 1.7542 Perplexity: 2.7349
+Epoch: 90/400............. Loss: 0.9967 Val Loss: 1.8032 Perplexity: 2.7093
+Epoch: 100/400............. Loss: 0.9478 Val Loss: 1.8354 Perplexity: 2.5801
+
+Problem:
+Training loss decreases while validation loss increases (indicates overfitting)
+
+——————————————————————————————————————————
+
+
+Second attempt: Add dropout layer to prevent overfitting
+Learning rate = 0.005
+Batch size = 32
+Hidden_dim = 128
+With dropout layer 0.4 after input
+
+Results:
+Epoch: 10/400............. Loss: 2.4830 Val Loss: 2.1107 Perplexity: 11.9776
+Epoch: 20/400............. Loss: 2.2404 Val Loss: 1.9134 Perplexity: 9.3968
+Epoch: 30/400............. Loss: 2.1320 Val Loss: 1.8334 Perplexity: 8.4317
+Epoch: 40/400............. Loss: 2.0858 Val Loss: 1.8357 Perplexity: 8.0511
+Epoch: 50/400............. Loss: 2.0153 Val Loss: 1.8103 Perplexity: 7.5027
+Epoch: 60/400............. Loss: 2.0357 Val Loss: 1.8132 Perplexity: 7.6578
+Epoch: 70/400............. Loss: 1.9815 Val Loss: 1.8087 Perplexity: 7.2534
+Epoch: 80/400............. Loss: 1.9854 Val Loss: 1.7894 Perplexity: 7.2822
+Epoch: 90/400............. Loss: 1.9444 Val Loss: 1.7940 Perplexity: 6.9896
+Epoch: 100/400............. Loss: 1.9725 Val Loss: 1.8141 Perplexity: 7.1890
+Epoch: 110/400............. Loss: 1.9491 Val Loss: 1.8030 Perplexity: 7.0222
+Epoch: 120/400............. Loss: 2.0565 Val Loss: 1.8067 Perplexity: 7.8188
+Epoch: 130/400............. Loss: 2.0130 Val Loss: 1.8070 Perplexity: 7.4859
+Epoch: 140/400............. Loss: 1.9715 Val Loss: 1.7839 Perplexity: 7.1813
+Epoch: 150/400............. Loss: 1.9212 Val Loss: 1.7827 Perplexity: 6.8292
+Epoch: 160/400............. Loss: 1.9121 Val Loss: 1.8038 Perplexity: 6.7672
+Epoch: 170/400............. Loss: 1.9851 Val Loss: 1.7941 Perplexity: 7.2795
+Epoch: 180/400............. Loss: 1.9052 Val Loss: 1.8098 Perplexity: 6.7209
+Epoch: 190/400............. Loss: 1.9641 Val Loss: 1.7824 Perplexity: 7.1287
+Epoch: 200/400............. Loss: 1.8799 Val Loss: 1.7811 Perplexity: 6.5527
+Epoch: 210/400............. Loss: 1.9137 Val Loss: 1.8013 Perplexity: 6.7779
+Epoch: 220/400............. Loss: 1.9617 Val Loss: 1.7891 Perplexity: 7.1118
+Epoch: 230/400............. Loss: 1.9185 Val Loss: 1.7907 Perplexity: 6.8106
+Epoch: 240/400............. Loss: 1.8765 Val Loss: 1.7765 Perplexity: 6.5306
+Epoch: 250/400............. Loss: 1.9146 Val Loss: 1.8084 Perplexity: 6.7841
+Epoch: 260/400............. Loss: 1.8697 Val Loss: 1.8001 Perplexity: 6.4867
+Epoch: 270/400............. Loss: 1.9075 Val Loss: 1.7979 Perplexity: 6.7364
+Epoch: 280/400............. Loss: 2.3793 Val Loss: 2.2909 Perplexity: 10.7970
+Epoch: 290/400............. Loss: 2.1708 Val Loss: 1.9563 Perplexity: 8.7657
+Epoch: 300/400............. Loss: 2.0648 Val Loss: 1.8950 Perplexity: 7.8834
+Epoch: 310/400............. Loss: 2.0774 Val Loss: 1.8511 Perplexity: 7.9838
+Epoch: 320/400............. Loss: 2.0065 Val Loss: 1.8403 Perplexity: 7.4375
+Epoch: 330/400............. Loss: 1.9717 Val Loss: 1.8330 Perplexity: 7.1829
+Epoch: 340/400............. Loss: 1.9526 Val Loss: 1.8052 Perplexity: 7.0467
+Epoch: 350/400............. Loss: 1.9184 Val Loss: 1.8144 Perplexity: 6.8104
+Epoch: 360/400............. Loss: 1.9343 Val Loss: 1.8010 Perplexity: 6.9189
+Epoch: 370/400............. Loss: 1.9397 Val Loss: 1.7898 Perplexity: 6.9569
+Epoch: 380/400............. Loss: 1.9073 Val Loss: 1.7925 Perplexity: 6.7346
+Epoch: 390/400............. Loss: 1.9683 Val Loss: 1.7908 Perplexity: 7.1582
+Epoch: 400/400............. Loss: 1.8959 Val Loss: 1.7936 Perplexity: 6.6583
+
+Prediction: Message-ID: <10930049.1075855687519.JavaMail.evans@thyme>
+Date: Tue, 1 May 0
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Effectiveness:
+Validation loss seems to rise and fall with training loss
+Problem:
+Spikes in training losses likely due to mini batches using Adam optimiser
+Loss does not seem to decrease below 1.8
+———————————————————————————————————————————
+
+Third attempt: Increase batch size
+Learning rate = 0.005
+Batch size = 64
+Hidden_dim = 128
+With dropout layer 0.4 after LSTM layer 
+Epoch: 10/400............. Loss: 2.2129 Val Loss: 1.9463 Perplexity: 9.1425
+Epoch: 20/400............. Loss: 1.8710 Val Loss: 1.6730 Perplexity: 6.4948
+Epoch: 30/400............. Loss: 1.7214 Val Loss: 1.6189 Perplexity: 5.5926
+Epoch: 40/400............. Loss: 1.6426 Val Loss: 1.5912 Perplexity: 5.1683
+Epoch: 50/400............. Loss: 1.6024 Val Loss: 1.5955 Perplexity: 4.9650
+Epoch: 60/400............. Loss: 1.5346 Val Loss: 1.6194 Perplexity: 4.6396
+Epoch: 70/400............. Loss: 1.4498 Val Loss: 1.6297 Perplexity: 4.2622
+Epoch: 80/400............. Loss: 1.4383 Val Loss: 1.6462 Perplexity: 4.2135
+Epoch: 90/400............. Loss: 1.4360 Val Loss: 1.6797 Perplexity: 4.2040
+Epoch: 100/400............. Loss: 1.3795 Val Loss: 1.6549 Perplexity: 3.9729
+Epoch: 110/400............. Loss: 1.3728 Val Loss: 1.6700 Perplexity: 3.9463
+Epoch: 120/400............. Loss: 1.4082 Val Loss: 1.6677 Perplexity: 4.0887
+Epoch: 130/400............. Loss: 1.3534 Val Loss: 1.6765 Perplexity: 3.8705
+Epoch: 140/400............. Loss: 1.3437 Val Loss: 1.6721 Perplexity: 3.8332
+Epoch: 150/400............. Loss: 1.3456 Val Loss: 1.6709 Perplexity: 3.8407
+Epoch: 160/400............. Loss: 1.3173 Val Loss: 1.6742 Perplexity: 3.7333
+Epoch: 170/400............. Loss: 2.2337 Val Loss: 2.4728 Perplexity: 9.3340
+Epoch: 180/400............. Loss: 1.8512 Val Loss: 1.7690 Perplexity: 6.3674
+Epoch: 190/400............. Loss: 1.6703 Val Loss: 1.6796 Perplexity: 5.3139
+Epoch: 200/400............. Loss: 1.5780 Val Loss: 1.6634 Perplexity: 4.8452
+Epoch: 210/400............. Loss: 1.5118 Val Loss: 1.6490 Perplexity: 4.5350
+Epoch: 220/400............. Loss: 1.4569 Val Loss: 1.6474 Perplexity: 4.2925
+Epoch: 230/400............. Loss: 1.4218 Val Loss: 1.6560 Perplexity: 4.1446
+Epoch: 240/400............. Loss: 1.4106 Val Loss: 1.6740 Perplexity: 4.0984
+Epoch: 250/400............. Loss: 1.3711 Val Loss: 1.6717 Perplexity: 3.9399
+Epoch: 260/400............. Loss: 1.3457 Val Loss: 1.6765 Perplexity: 3.8410
+Epoch: 270/400............. Loss: 1.3297 Val Loss: 1.6921 Perplexity: 3.7798
+Epoch: 280/400............. Loss: 1.3228 Val Loss: 1.6869 Perplexity: 3.7541
+Epoch: 290/400............. Loss: 1.3136 Val Loss: 1.7048 Perplexity: 3.7195
+Epoch: 300/400............. Loss: 1.3153 Val Loss: 1.6867 Perplexity: 3.7258
+Epoch: 310/400............. Loss: 1.3049 Val Loss: 1.7103 Perplexity: 3.6872
+Epoch: 320/400............. Loss: 1.2760 Val Loss: 1.6975 Perplexity: 3.5821
+Epoch: 330/400............. Loss: 1.2699 Val Loss: 1.7131 Perplexity: 3.5606
+Epoch: 340/400............. Loss: 1.2636 Val Loss: 1.7253 Perplexity: 3.5382
+Epoch: 350/400............. Loss: 1.2816 Val Loss: 1.7200 Perplexity: 3.6024
+Epoch: 360/400............. Loss: 1.2643 Val Loss: 1.7248 Perplexity: 3.5406
+Epoch: 370/400............. Loss: 1.2465 Val Loss: 1.7351 Perplexity: 3.4783
+Epoch: 380/400............. Loss: 1.2376 Val Loss: 1.7243 Perplexity: 3.4473
+Epoch: 390/400............. Loss: 1.2423 Val Loss: 1.7418 Perplexity: 3.4635
+Epoch: 400/400............. Loss: 1.2560 Val Loss: 1.7344 Perplexity: 3.5115
+
+Prediction:
+Message-ID: <29303242.1075855689206.JavaMail.evans@thyme>
+Date: Thu, 23 Jan
+>  
+[many new line characters]
+Problem:
+Validation loss increases when training loss decreases (indicates overfitting)
+Spikes in loss still present (batch size change not effective)
+Loss does not decrease below 1.2
+
+Fourth attempt: Change batch size back to 32, increase number of epochs
+Learning rate = 0.005
+Batch size = 32
+Hidden_dim = 128
+With dropout layer 0.4
+
+Fifth attempt: Increase learning rate
+Learning rate = 0.01
+Batch size = 32
+Hidden_dim = 128
+With dropout layer 0.4
+
+Epoch: 10/800............. Loss: 2.3115 Val Loss: 1.9839 Perplexity: 10.0894
+Epoch: 20/800............. Loss: 2.2827 Val Loss: 1.8858 Perplexity: 9.8034
+Epoch: 30/800............. Loss: 2.1650 Val Loss: 1.8739 Perplexity: 8.7145
+Epoch: 40/800............. Loss: 2.2118 Val Loss: 1.9001 Perplexity: 9.1326
+Epoch: 50/800............. Loss: 2.1213 Val Loss: 1.8626 Perplexity: 8.3422
+Epoch: 60/800............. Loss: 2.0462 Val Loss: 1.8281 Perplexity: 7.7384
+Epoch: 70/800............. Loss: 2.0213 Val Loss: 1.8333 Perplexity: 7.5484
+Epoch: 80/800............. Loss: 2.1051 Val Loss: 1.8222 Perplexity: 8.2077
+Epoch: 90/800............. Loss: 2.0097 Val Loss: 1.8448 Perplexity: 7.4611
+Epoch: 100/800............. Loss: 2.1342 Val Loss: 1.9137 Perplexity: 8.4499
+Epoch: 110/800............. Loss: 2.0495 Val Loss: 1.8199 Perplexity: 7.7640
+Epoch: 120/800............. Loss: 2.0609 Val Loss: 1.8331 Perplexity: 7.8529
+Epoch: 130/800............. Loss: 1.9516 Val Loss: 1.8309 Perplexity: 7.0397
+Epoch: 140/800............. Loss: 3.0992 Val Loss: 3.0565 Perplexity: 22.1803
+Epoch: 150/800............. Loss: 3.0739 Val Loss: 2.9595 Perplexity: 21.6263
+Epoch: 160/800............. Loss: 3.0084 Val Loss: 2.9093 Perplexity: 20.2544
+Epoch: 170/800............. Loss: 2.9994 Val Loss: 2.8755 Perplexity: 20.0745
+Epoch: 180/800............. Loss: 2.9842 Val Loss: 2.8388 Perplexity: 19.7697
+Epoch: 190/800............. Loss: 2.9520 Val Loss: 2.8137 Perplexity: 19.1437
+Epoch: 200/800............. Loss: 2.9064 Val Loss: 2.7611 Perplexity: 18.2915
+Epoch: 210/800............. Loss: 2.8680 Val Loss: 2.7267 Perplexity: 17.6023
+Epoch: 220/800............. Loss: 2.8559 Val Loss: 2.6873 Perplexity: 17.3904
+Epoch: 230/800............. Loss: 2.7951 Val Loss: 2.6388 Perplexity: 16.3649
+Epoch: 240/800............. Loss: 2.7632 Val Loss: 2.5847 Perplexity: 15.8504
+Epoch: 250/800............. Loss: 2.7429 Val Loss: 2.5308 Perplexity: 15.5313
+Epoch: 260/800............. Loss: 2.7284 Val Loss: 2.4943 Perplexity: 15.3078
+Epoch: 270/800............. Loss: 2.6842 Val Loss: 2.4120 Perplexity: 14.6459
+Epoch: 280/800............. Loss: 2.6063 Val Loss: 2.3483 Perplexity: 13.5487
+Epoch: 290/800............. Loss: 2.5718 Val Loss: 2.2723 Perplexity: 13.0888
+Epoch: 300/800............. Loss: 2.5357 Val Loss: 2.2224 Perplexity: 12.6249
+Epoch: 310/800............. Loss: 2.4240 Val Loss: 2.1484 Perplexity: 11.2914
+Epoch: 320/800............. Loss: 2.4206 Val Loss: 2.1183 Perplexity: 11.2529
+Epoch: 330/800............. Loss: 2.3782 Val Loss: 2.0690 Perplexity: 10.7853
+Epoch: 340/800............. Loss: 2.3310 Val Loss: 2.0381 Perplexity: 10.2880
+Epoch: 350/800............. Loss: 2.3139 Val Loss: 2.0033 Perplexity: 10.1137
+Epoch: 360/800............. Loss: 2.2854 Val Loss: 1.9918 Perplexity: 9.8298
+Epoch: 370/800............. Loss: 2.2795 Val Loss: 1.9719 Perplexity: 9.7716
+Epoch: 380/800............. Loss: 2.2444 Val Loss: 1.9646 Perplexity: 9.4344
+Epoch: 390/800............. Loss: 2.2020 Val Loss: 1.9490 Perplexity: 9.0433
+Epoch: 400/800............. Loss: 2.2337 Val Loss: 1.9209 Perplexity: 9.3342
+Epoch: 410/800............. Loss: 2.1822 Val Loss: 1.9072 Perplexity: 8.8655
+Epoch: 420/800............. Loss: 2.1469 Val Loss: 1.9044 Perplexity: 8.5583
+Epoch: 430/800............. Loss: 2.1935 Val Loss: 1.9067 Perplexity: 8.9670
+Epoch: 440/800............. Loss: 2.1729 Val Loss: 1.8920 Perplexity: 8.7835
+Epoch: 450/800............. Loss: 2.1097 Val Loss: 1.8738 Perplexity: 8.2462
+Epoch: 460/800............. Loss: 2.1019 Val Loss: 1.8779 Perplexity: 8.1814
+Epoch: 470/800............. Loss: 2.0844 Val Loss: 1.8540 Perplexity: 8.0399
+Epoch: 480/800............. Loss: 2.0462 Val Loss: 1.8501 Perplexity: 7.7381
+Epoch: 490/800............. Loss: 2.0932 Val Loss: 1.8505 Perplexity: 8.1108
+Epoch: 500/800............. Loss: 2.0436 Val Loss: 1.8479 Perplexity: 7.7181
+Epoch: 510/800............. Loss: 2.0667 Val Loss: 1.8354 Perplexity: 7.8985
+Epoch: 520/800............. Loss: 1.9983 Val Loss: 1.8326 Perplexity: 7.3769
+Epoch: 530/800............. Loss: 2.0579 Val Loss: 1.8535 Perplexity: 7.8296
+Epoch: 540/800............. Loss: 1.9948 Val Loss: 1.8448 Perplexity: 7.3506
+Epoch: 550/800............. Loss: 1.9787 Val Loss: 1.8453 Perplexity: 7.2335
+Epoch: 560/800............. Loss: 2.0186 Val Loss: 1.8196 Perplexity: 7.5276
+Epoch: 570/800............. Loss: 1.9924 Val Loss: 1.8244 Perplexity: 7.3331
+Epoch: 580/800............. Loss: 2.0005 Val Loss: 1.8380 Perplexity: 7.3924
+Epoch: 590/800............. Loss: 2.0079 Val Loss: 1.8410 Perplexity: 7.4479
+Epoch: 600/800............. Loss: 2.3791 Val Loss: 2.2216 Perplexity: 10.7949
+Epoch: 610/800............. Loss: 1.9622 Val Loss: 1.8415 Perplexity: 7.1147
+Epoch: 620/800............. Loss: 2.0157 Val Loss: 1.8152 Perplexity: 7.5061
+Epoch: 630/800............. Loss: 2.0273 Val Loss: 1.8424 Perplexity: 7.5935
+Epoch: 640/800............. Loss: 2.0388 Val Loss: 1.8551 Perplexity: 7.6810
+Epoch: 650/800............. Loss: 1.9940 Val Loss: 1.8067 Perplexity: 7.3449
+Epoch: 660/800............. Loss: 1.9672 Val Loss: 1.8040 Perplexity: 7.1504
+Epoch: 670/800............. Loss: 2.7889 Val Loss: 2.6438 Perplexity: 16.2637
+Epoch: 680/800............. Loss: 2.1986 Val Loss: 1.9807 Perplexity: 9.0121
+Epoch: 690/800............. Loss: 2.0691 Val Loss: 1.8638 Perplexity: 7.9181
+Epoch: 700/800............. Loss: 2.0604 Val Loss: 1.8361 Perplexity: 7.8495
+Epoch: 710/800............. Loss: 2.0000 Val Loss: 1.8487 Perplexity: 7.3890
+Epoch: 720/800............. Loss: 1.9825 Val Loss: 1.8171 Perplexity: 7.2606
+Epoch: 730/800............. Loss: 2.0126 Val Loss: 1.8606 Perplexity: 7.4828
+Epoch: 740/800............. Loss: 2.0481 Val Loss: 1.8768 Perplexity: 7.7532
+Epoch: 750/800............. Loss: 2.0829 Val Loss: 1.8682 Perplexity: 8.0280
+Epoch: 760/800............. Loss: 2.0635 Val Loss: 1.8439 Perplexity: 7.8733
+Epoch: 770/800............. Loss: 1.9657 Val Loss: 1.8169 Perplexity: 7.1402
+Epoch: 780/800............. Loss: 2.0372 Val Loss: 1.8254 Perplexity: 7.6688
+Epoch: 790/800............. Loss: 2.0175 Val Loss: 1.8135 Perplexity: 7.5198
+Epoch: 800/800............. Loss: 2.0069 Val Loss: 1.8192 Perplexity: 7.4399
